@@ -1,2 +1,2 @@
 # Hive
-Fundamental Hive commands
+Hadoop and Hive fundamental commands
