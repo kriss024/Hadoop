@@ -1,6 +1,6 @@
 # YARN - view application info
 yarn application -list -appStates RUNNING  > application_list.txt
-yarn application -list | grep -hi $(whoami)
+yarn application -list | grep -hi $USER
 
 yarn application -kill <application_id>
 
