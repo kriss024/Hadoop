@@ -16,8 +16,9 @@ CREATE EXTERNAL TABLE IF NOT EXISTS <table_name>
 STORED AS PARQUET
 AS SELECT * FROM <table_name2>;
 
-CREATE TABLE <table_name>
-STORED AS ORC TBLPROPERTIES('ORC.COMPRESS'='SNAPPY')
+CREATE EXTERNAL TABLE IF NOT EXISTS <table_name>
+PARTITIONED BY (column_name)
+STORED AS PARQUET
 AS SELECT * FROM <table_name2>;
 
 CREATE TABLE IF NOT EXISTS <database_name>.<table_name>(txn_id BIGINT, cust_id INT, amount DECIMAL(20,2),txn_type STRING, created_date DATE)
