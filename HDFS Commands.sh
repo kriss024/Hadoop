@@ -45,6 +45,9 @@ hdfs dfs -rm -r -skipTrash /user/bruszewski/input.csv
 # Finding all files which match the mentioned
 hadoop fs -find /apps/hive/ -name abt_spark -print
 
+# Searching for a substring in files
+hdfs dfs -find /user/bruszewski -print0 | xargs -0 hdfs dfs -cat | grep "my substring"
+
 # We are using the stat command to print the information about file ‘input.txt’ present in the dataflair directory of HDFS.
 hadoop fs -stat %y /user/bruszewski/input.txt
 
