@@ -31,4 +31,7 @@ COMMENT 'A table to store transactions'
 PARTITIONED BY (txn_date DATE, txn_type STRING)
 STORED AS PARQUET;
 
+DROP TABLE IF EXISTS <view_name>;
+CREATE VIEW IF NOT EXISTS <view_name> AS SELECT1;
+
 SELECT CAST(snr_5309 AS STRING FORMAT 'YYYY-MM') AS format_5309
