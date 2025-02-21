@@ -34,4 +34,6 @@ STORED AS PARQUET;
 DROP TABLE IF EXISTS <view_name>;
 CREATE VIEW IF NOT EXISTS <view_name> AS SELECT1;
 
-SELECT CAST(snr_5309 AS STRING FORMAT 'YYYY-MM') AS format_5309
+SELECT CAST(report_date AS STRING FORMAT 'YYYY-MM') AS report_date
+
+SELECT date_format(report_date, 'yyyy-MM') AS report_date
