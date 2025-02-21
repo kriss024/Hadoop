@@ -4,7 +4,7 @@ DROP DATABASE <database_name>;
 
 SHOW DATABASES LIKE '*DWH*';
 SHOW TABLES IN <database_name> LIKE '*ABT*';
-DESCRIBE FORMATTED <table_name>;
+DESCRIBE <table_name>;
 
 DROP TABLE IF EXISTS <table_name>;
 
